@@ -8,3 +8,16 @@ kalo mau coba test website :
 - terminal pertama ketik '"npm run dev", terminal kedua ketik "php artisan serve"
 
 coba register dah kalo mau
+
+Fitur yang bakalan masuk
+- input data barang baru
+- laporan bulanan barang masuk dan keluar
+- input data ruangan
+- laporan input ruangan
+- pembuatan surat disposisi
+- peminjaman barang/ruangan
+- laporan peminjaman barang/ruangan
+- approval peminjaman
+- pengadaan barang baru
+- pengadaan barang rusak
+- multiuser admin
