@@ -1,24 +1,111 @@
 <!-- Sidebar -->
 <div class="sidebar">
-    <!-- Sidebar user panel (optional) -->
+    <!-- Sidebar user panel (optional) 
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="info">
             <a href="{{ route('profile.show') }}" class="d-block">{{ Auth::user()->name }}</a>
         </div>
     </div>
-
+-->
     <!-- Sidebar Menu -->
     <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
             data-accordion="false">
             <li class="nav-item">
                 <a href="{{ route('home') }}" class="nav-link">
-                    <i class="nav-icon fas fa-th"></i>
+                <i class="nav-icon fas fa-th"></i> 
                     <p>
                         {{ __('Dashboard') }}
                     </p>
                 </a>
             </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-book"></i>
+                    <p>
+                        Barang
+                        <i class="fas fa-angle-left right"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview" style="display: none;">
+                    <li class="nav-item">
+                        <a href="{{ route('inputbrg') }}" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>List/input barang</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Pengadaan barang</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Laporan Bulanan</p>
+                        </a>
+                    </li>
+                </ul>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-columns"></i>
+                        <p>
+                            Ruangan
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview" style="display: none;">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Input Ruangan</p>
+                            </a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Laporan Bulanan</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon far fa-copy"></i>
+                            <p>
+                                Peminjaman
+                                <i class="fas fa-angle-left right"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview" style="display: none;">
+
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Surat Masuk</p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Approval Surat</p>
+                                </a>
+                            </li>
+        
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Laporan Bulanan</p>
+                                </a>
+                            </li>
+                        </ul>
 
             <li class="nav-item">
                 <a href="{{ route('users.index') }}" class="nav-link">
@@ -38,6 +125,7 @@
                 </a>
             </li>
 
+            <!--
             <li class="nav-item">
                 <a href="#" class="nav-link">
                     <i class="nav-icon fas fa-circle nav-icon"></i>
@@ -54,6 +142,7 @@
                         </a>
                     </li>
                 </ul>
+            -->
             </li>
         </ul>
     </nav>
