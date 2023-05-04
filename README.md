@@ -21,3 +21,16 @@ Fitur yang bakalan masuk
 - pengadaan barang baru
 - pengadaan barang rusak
 - multiuser admin
+
+Yang sudah ada
+- login
+- desain website
+- database barang
+- menampilkan tabel list barang
+- routes ke input barang
+
+Yang belum masuk di project nya
+- halaman utama
+- tabel tabel lain beserta routes nya
+- fungsi crud melalui website
+- pembuatan surat disposisi
