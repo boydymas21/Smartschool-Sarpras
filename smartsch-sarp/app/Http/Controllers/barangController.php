@@ -12,4 +12,8 @@ class barangController extends Controller
         $barangs = input_barang::all();
         return view('inputbrg',compact('barangs'));
     }
+
+    public function create(){
+        
+    }
 }

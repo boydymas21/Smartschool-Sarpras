@@ -30,4 +30,9 @@ class HomeController extends Controller
     {
         return view('inputbrg');
     }
+
+    public function createhal()
+    {
+        return view('createbrg.create');
+    }
 }

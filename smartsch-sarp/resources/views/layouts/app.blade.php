@@ -100,7 +100,7 @@
 <!-- datatables -->
 <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
 <script src="//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-<script>let table = new DataTable('#example1');</script>
+<script>let table = new DataTable('#barangtable');</script>
 @yield('scripts')
 </body>
 </html>

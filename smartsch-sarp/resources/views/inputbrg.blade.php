@@ -6,10 +6,15 @@
             <div class="card">
                 <div class="card-header">
                 <h3 class="card-title">List Barang</h3>
+                    <div class="row">
+                        <div class="col-auto">
+                            <a href="{{ route('createbrg.create') }}"><button type="button" class="btn btn-block btn-primary">+</button></a>
+                        </div>
+                    </div>
                 </div>
     
         <div class="card-body">
-            <table id="example1" class="table table-bordered table-striped">
+            <table id="barangtable" class="table table-bordered table-striped">
                 <thead>
                     <tr>
                         <th>id</th>
