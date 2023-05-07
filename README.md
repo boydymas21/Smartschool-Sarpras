@@ -23,6 +23,22 @@ Fitur
 - Approval peminjaman (Wakasek dapat mengelola status peminjaman yang masuk)
 - Status approval peminjaman (Admin dapat melihat status approval peminjaman)
 
+Fitur (proposal)
+- Public
+  1. Membuat peminjaman baru
+  2. Membuat surat disposisi sebelum masuk pada tahap peminjaman
+  3. Melihat approval peminjaman
+ - Admin
+  1. Data Barang : Tambah, Edit ,Hapus
+  2. Pengadaan Barang : Tambah, Edit ,Hapus
+  3. Data Ruangan : Tambah, Edit ,Hapus
+  4. Data Peminjaman : Tambah, Edit ,Hapus
+  5. Status approval : dapat melihat status approval peminjaman dan status pengembalian barang/ruangan
+  6. Data Admin : Tambah, Edit ,Hapus
+  -Kepsek/Wakasek
+   1. dapat mengelola status peminjaman barang/ruangan
+   2. dapat melihat laporan barang dan peminjaman bulanan
+
 Yang sudah ada
 - login
 - desain website
