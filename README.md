@@ -11,7 +11,7 @@ coba register dah kalo mau
 
 Fitur
 - Home (User public bisa melihat homepage untuk membuat peminjaman atau surat disposisi)
-- Login (Admin atau Wakases diharuskan untuk login sesuai hak akses masing masing)
+- Login (Admin atau Wakasek diharuskan untuk login sesuai hak akses masing masing)
 - Pendataan Barang (Admin dapat mengelola data barang Sarana Prasarana)
 - pengadaan barang baru (Admin dapat mengelola pengadaan barang baru sebelum masuk pada tahap pendataan)
 - pengadaan barang rusak (Admin dapat mengelola pengadaan barang yang sudah rusak)
