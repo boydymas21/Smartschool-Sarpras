@@ -8,7 +8,7 @@
                 <h3 class="card-title">List Barang</h3>
                     <div class="row">
                         <div class="col-auto">
-                            <a href="{{ route('createbrg.create') }}"><button type="button" class="btn btn-block btn-primary">+</button></a>
+                            <a href="{{ route('barang.create') }}"><button type="button" class="btn btn-block btn-primary">+</button></a>
                         </div>
                     </div>
                 </div>
@@ -17,7 +17,8 @@
             <table id="barangtable" class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th>id</th>
+                        <th>Id</th>
+                        <th>Nomor Seri</th>
                         <th>Nama</th>
                         <th>Satuan</th>
                         <th>Kategori</th>
@@ -29,18 +30,24 @@
                         </tr>
                 </thead>
                 <tbody>
-                    @foreach ($barangs as $item)
+                    <?php $i = $data->firstItem()?>
+                    @foreach ($data as $item)
                     <tr>
-                        <td>{{$item->id}}</td>
+                        <td>{{$i}}</td>
+                        <td>{{$item->seri}}</td>
                         <td>{{$item->nama}}</td>
                         <td>{{$item->satuan}}</td>
                         <td>{{$item->kategori}}</td>
                         <td>{{$item->jml_baik}}</td>
                         <td>{{$item->jml_rusak}}</td>
                         <td>{{$item->ruangan}}</td>
-                        <td>X</td>
-                        <td>X</td>
+                        <td><a href="" class="btn btn-primary btn-sm">Info</a></td>
+                        <td>
+                            <a href="{{url('barang/'.$item->id.'/edit')}}" class="btn btn-warning btn-sm">Edit</a>
+                            <a href="" class="btn btn-danger btn-sm">Delete</a>
+                        </td>
                     </tr> 
+                    <?php $i++ ?>
                     @endforeach
                 </tbody>
             </table>

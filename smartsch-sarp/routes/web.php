@@ -1,4 +1,6 @@
 <?php
+
+use App\Http\Controllers\barangController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -20,9 +22,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/inputbrg', [App\Http\Controllers\HomeController::class, 'input'])->name('inputbrg');
-Route::get('/inputbrg', [App\Http\Controllers\barangController::class, 'barang'])->name('inputbrg');
-Route::get('/createbrg/create', [App\Http\Controllers\HomeController::class, 'createhal'])->name('createbrg.create');
+Route::resource('barang', barangController::class);
 Route::middleware('auth')->group(function () {
     Route::view('about', 'about')->name('about');
 

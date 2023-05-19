@@ -25,14 +25,4 @@ class HomeController extends Controller
     {
         return view('home');
     }
-
-    public function input()
-    {
-        return view('inputbrg');
-    }
-
-    public function createhal()
-    {
-        return view('createbrg.create');
-    }
 }

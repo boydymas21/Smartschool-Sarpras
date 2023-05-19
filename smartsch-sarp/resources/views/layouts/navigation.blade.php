@@ -30,7 +30,7 @@
                 </a>
                 <ul class="nav nav-treeview" style="display: none;">
                     <li class="nav-item">
-                        <a href="{{ route('inputbrg') }}" class="nav-link">
+                        <a href="{{ route('barang.index') }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>List/input barang</p>
                         </a>

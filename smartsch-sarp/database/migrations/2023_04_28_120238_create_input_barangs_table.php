@@ -23,6 +23,7 @@ return new class extends Migration
             $table->integer('jml_rusak');
             $table->string('ruangan');
             $table->string('imgs');
+            $table->timestamps();
         });
     }
 
