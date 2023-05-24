@@ -20,7 +20,7 @@
                 <div class="col-lg-12">
 
                     <div class="alert alert-info">
-                        Sample table page
+                        Data User 
                     </div>
 
                     <div class="card">
