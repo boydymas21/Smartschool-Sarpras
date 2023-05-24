@@ -94,7 +94,7 @@
 
 <!-- REQUIRED SCRIPTS -->
 
-@vite('resources/js/app.js')
+{{ mix('/js/app.js') }}
 <!-- AdminLTE App -->
 <script src="{{ asset('js/adminlte.min.js') }}" defer></script>
 <!-- datatables -->

@@ -27,7 +27,7 @@
 </div>
 <!-- /.login-box -->
 
-{{ mix('resources/js/app.js') }}
+{{ mix('/js/app.js') }}
 <!-- Bootstrap 4 -->
 <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
 <!-- AdminLTE App -->
