@@ -21,9 +21,10 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">{{ __('Tentang kami') }}</h5>
-
+                            <br>
+                            <br>
                             <p class="card-text">
-                                {{ __('copyright by Kelompok 8 Golongan C teknik informatika 2020') }}
+                                {{ __('Di buat oleh Kelompok 8 Golongan C teknik informatika 2020') }}
                             </p>
                         </div>
                     </div>
