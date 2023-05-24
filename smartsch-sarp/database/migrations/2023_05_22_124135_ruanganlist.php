@@ -13,18 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('input_barangs', function (Blueprint $table) {
+        Schema::create('ruangans', function (Blueprint $table) {
             $table->id();
-            $table->string('seri');
-            $table->unique('seri');
-            $table->string('nama');
-            $table->date('tgl_beli');
-            $table->string('satuan');
-            $table->string('kategori');
-            $table->integer('jml_baik');
-            $table->integer('jml_rusak');
-            $table->string('ruangan');
-            $table->string('imgs')->nullable();
+            $table->string('nama_ruangan');;
+            $table->string('foto_ruangan');
             $table->timestamps();
         });
     }
