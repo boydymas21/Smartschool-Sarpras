@@ -9,4 +9,10 @@ class input_barang extends Model
 {
     use HasFactory;
     protected $fillable = ['id', 'seri', 'nama', 'tgl_beli', 'satuan', 'kategori','jml_baik', 'jml_rusak','ruangan','imgs'];
+
+    public function user()
+    {
+        return $this->hasMany(User::class);
+    }
+
 }

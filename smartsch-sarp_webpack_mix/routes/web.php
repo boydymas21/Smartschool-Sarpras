@@ -1,7 +1,12 @@
 <?php
 
 use App\Http\Controllers\barangController;
+use App\Http\Controllers\kategoryController;
+use App\Http\Controllers\peminjaman;
+use App\Http\Controllers\PengadaanController;
 use App\Http\Controllers\ruanganController;
+use App\Http\Controllers\unitkategoriController;
+use App\Http\Controllers\wordController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -19,12 +24,24 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function(){
     return view('welcome');
 });
+Route::resource('peminjaman', peminjaman::class);
+
+Route::get('word', function(){
+    return view('word');
+});
+Route::post('word', [App\Http\Controllers\wordController::class, 'index'])->name('word');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('barang/laporan', [App\Http\Controllers\barangController::class, 'laporan'])->name('barang.laporan');
+Route::get('/suratmasuk', [App\Http\Controllers\HomeController::class, 'suratmasuk'])->name('suratmasuk');
+Route::get('barang/detail/{id}', [\App\Http\Controllers\barangController::class,'detail'])->name('barang.detail');
+Route::resource('unitkategori', unitkategoriController::class);
+Route::resource('kategory', kategoryController::class);
 Route::resource('barang', barangController::class);
 Route::resource('ruangan', ruanganController::class);
+Route::resource('pengadaan', pengadaanController::class);
 Route::middleware('auth')->group(function () {
     Route::view('about', 'about')->name('about');
 

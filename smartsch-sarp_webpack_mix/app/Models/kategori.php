@@ -12,6 +12,8 @@ class kategori extends Model
         'nama_kategori',
     ];
 
+    public $timestamps = false;
+
     public function user()
     {
         return $this->hasMany(User::class);

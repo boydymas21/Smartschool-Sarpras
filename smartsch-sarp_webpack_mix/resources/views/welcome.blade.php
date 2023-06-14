@@ -62,7 +62,7 @@
                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
-                <h5 class="text-center text-uppercase text-secondary mb-0">pilih salah satu dari ketiga gambar dibawah untuk mengakses fitur Sarpras</h5>
+                <h5 class="text-center text-uppercase text-secondary mb-1">pilih salah satu dari ketiga gambar dibawah untuk mengakses fitur Sarpras</h5>
                 <br>
                 <!-- Portfolio Grid Items-->
                 <div class="row justify-content-center">
@@ -73,6 +73,7 @@
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
                             <img class="img-fluid" src="assets/img/portfolio/cabin.png" alt="..." />
+                            <h1 class="text-center">Peminjaman</h1>
                         </div>
                     </div>
                     <!-- Portfolio Item 2-->
@@ -82,6 +83,7 @@
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
                             <img class="img-fluid" src="assets/img/portfolio/cake.png" alt="..." />
+                            <h1 class="text-center">Surat</h1>
                         </div>
                     </div>
                     <!-- Portfolio Item 3-->
@@ -91,6 +93,7 @@
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
                             <img class="img-fluid" src="assets/img/portfolio/circus.png" alt="..." />
+                            <h1 class="text-center">Approval List</h1>
                         </div>
                     </div>
                 </div>
@@ -193,10 +196,12 @@
                                     </div>
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">Silahkan melakukan peminjaman barang/ruangan melalui tombol berikut</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
+                                    <a href="{{route('peminjaman.create')}}">
+                                    <button class="btn btn-primary">
+                                        <i class=""></i>
+                                        Peminjaman
                                     </button>
+                                </a>
                                 </div>
                             </div>
                         </div>
@@ -223,10 +228,12 @@
                                     </div>
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">Silahkan click tombol berikut untuk mengunduh surat disposisi</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
+                                    <a href="{{route('word')}}">
+                                        <button class="btn btn-primary">
+                                            <i class=""></i>
+                                            Surat
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -253,9 +260,10 @@
                                     </div>
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">Silahkan klik tombol berikut untuk mengakses list approval peminjaman</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
+                                    <a href="{{route('peminjaman.index')}}">
+                                    <button class="btn btn-primary">
+                                        <i class=""></i>
+                                        List
                                     </button>
                                 </div>
                             </div>

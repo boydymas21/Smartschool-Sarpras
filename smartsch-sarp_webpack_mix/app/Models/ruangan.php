@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class ruangan extends Model
 {
     use HasFactory;
-    protected $fillable = ['id', 'nama_ruangan' ,'imgs'];
+    protected $fillable = ['nama_ruangan','ket_ru' ,'foto_ruangan'];
 
     public function user()
     {

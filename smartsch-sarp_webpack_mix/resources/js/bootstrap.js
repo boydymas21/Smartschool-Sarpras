@@ -12,6 +12,9 @@ import 'bootstrap';
 window.Popper = Popper;
 window.$ = window.jQuery = jQuery;
 
+window.Popper = require('popper.js').default;
+    window.$ = window.jQuery = require('jquery');
+
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the

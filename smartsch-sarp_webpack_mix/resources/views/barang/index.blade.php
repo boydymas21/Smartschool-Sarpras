@@ -38,10 +38,10 @@
                         <td>{{$item->nama}}</td>
                         <td>{{$item->satuan}}</td>
                         <td>{{$item->kategori}}</td>
-                        <td>{{$item->jml_baik}}</td>
-                        <td>{{$item->jml_rusak}}</td>
+                        <td>{{$item->jml_baik}} {{$item->satuan}}</td>
+                        <td>{{$item->jml_rusak}} {{$item->satuan}}</td>
                         <td>{{$item->ruangan}}</td>
-                        <td><a href="" class="btn btn-primary btn-sm">Info</a></td>
+                        <td><a href="barang/detail/{{ $item->id }}" class="btn btn-primary btn-sm">Info</a></td>
                         <td>
                             <a href="{{url('barang/'.$item->seri.'/edit')}}" class="btn btn-warning btn-sm">Edit</a>
                             <form onsubmit="return confirm('Yakin menghapus data?')" class="d-inline" action="{{url('barang/'.$item->seri)}}" method="POST">

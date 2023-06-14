@@ -7,6 +7,7 @@ use App\Models\input_barang;
 use App\Models\satuan;
 use App\Models\kategori;
 use App\Models\ruangan;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 
 class barangController extends Controller
@@ -20,7 +21,18 @@ class barangController extends Controller
     {
         $data = input_barang::orderBy('id', 'desc')->paginate(10);
         $satuan = satuan::all();
-        return view('barang.index', compact('satuan'))->with('data', $data);
+        $kategori = kategori::all();
+        $ruangan = ruangan::all();
+        return view('barang.index', compact('satuan', 'kategori', 'ruangan'))->with('data', $data);
+    }
+
+    public function laporan()
+    {   
+        $data = input_barang::orderBy('id', 'desc')->paginate(10);
+        $satuan = satuan::all();
+        $kategori = kategori::all();
+        $ruangan = ruangan::all();
+        return view('barang.laporan', compact('satuan', 'kategori', 'ruangan'))->with('data', $data);
     }
 
     /**
@@ -98,10 +110,21 @@ class barangController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+     public function detail($id)
+    {
+        $data = DB::table('input_barangs')->where('id', $id)->first();
+        return view('barang.detail', ['data'=>$data]);
+    }
+
     public function edit($id)
     {
+        $satuan = satuan::all();
+        $kategori = kategori::all();
+        $ruangan = ruangan::all();
         $data = input_barang::where('seri',$id)->first();
-        return view('barang.edit')->with('data',$data);
+        return view('barang.edit', compact('satuan', 'kategori','ruangan'))->with('data',$data);
+        
     }
 
     /**
@@ -121,7 +144,7 @@ class barangController extends Controller
             'jml_baik' =>'required',
             'jml_rusak' =>'required',
             'ruangan' =>'required',
-            'imgs' =>'required',
+            
         ],[
             'nama.required' => 'Nama barang wajib diisi',
             'tgl_beli.required' => 'Tanggal pembelian wajib diisi',
@@ -130,7 +153,7 @@ class barangController extends Controller
             'jml_baik.required' => 'Jumlah barang baik wajib diisi',
             'jml_rusak.required' => 'Jumlah barang rusak wajib diisi (0 jika tidak ada)',
             'ruangan.required' => 'Ruangan barang wajib diisi',
-            'imgs.required' => 'Foto barang wajib diisi',
+            
         ]);
         $data = [
             'nama' => $request->nama,
@@ -140,7 +163,7 @@ class barangController extends Controller
             'jml_baik' => $request->jml_baik,
             'jml_rusak' => $request->jml_rusak,
             'ruangan' => $request->ruangan,
-            'imgs' => $request->imgs,
+            'imgs' => $request->imgs ?? 'Foto tidak tersedia',
         ];
         input_barang::where('seri', $id)->update($data);
         return redirect()->to('barang');

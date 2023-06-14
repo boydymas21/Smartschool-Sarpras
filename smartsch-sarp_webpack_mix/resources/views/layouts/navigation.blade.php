@@ -37,16 +37,16 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{ route('pengadaan.index') }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Pengadaan barang</p>
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{route('barang.laporan')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
-                            <p>Laporan Bulanan</p>
+                            <p>Laporan Barang</p>
                         </a>
                     </li>
                 </ul>
@@ -66,15 +66,16 @@
                                 <p>Input Ruangan</p>
                             </a>
                         </li>
-    
+    <!--
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Laporan Bulanan</p>
+                                <p>Laporan Ruangan</p>
                             </a>
                         </li>
+                        -->
                     </ul>
-
+                
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class="nav-icon far fa-copy"></i>
@@ -86,7 +87,7 @@
                         <ul class="nav nav-treeview" style="display: none;">
 
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="{{route('suratmasuk')}}" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Surat Masuk</p>
                                 </a>
@@ -102,7 +103,33 @@
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Laporan Bulanan</p>
+                                    <p>Laporan Pinjaman</p>
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-file"></i>
+                                <p>
+                                    Others
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview" style="display: none;">
+
+                            <li class="nav-item">
+                                <a href="{{route('unitkategori.index')}}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Pengaturan Satuan</p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="{{route('kategory.index')}}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Pengaturan Kategori</p>
                                 </a>
                             </li>
                         </ul>

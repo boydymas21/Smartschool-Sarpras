@@ -43,7 +43,7 @@
                     <label for="position-option">Satuan Barang</label>
                     <select class="form-control" name="satuan">
                        @foreach ($satuan as $brobro)
-                          <option value="{{ $brobro->id_satuan }}">{{ $brobro->nama_satuan}}</option>
+                          <option>{{ $brobro->nama_satuan}}</option>
                        @endforeach
                     </select>
                  </div>
@@ -51,7 +51,7 @@
                     <label for="position-option">Kategori Barang</label>
                     <select class="form-control" name="kategori">
                         @foreach ($kategori as $bro)
-                           <option value="{{ $bro->id }}">{{ $bro->nama_kategori}}</option>
+                           <option>{{ $bro->nama_kategori}}</option>
                         @endforeach
                      </select>
                 </div>
@@ -73,7 +73,7 @@
                     <label for="position-option">Ruangan</label>
                     <select class="form-control" name="ruangan">
                         @foreach ($ruangan as $brobrobro)
-                           <option value="{{ $brobrobro->id }}">{{ $brobrobro->nama_ruangan}}</option>
+                           <option>{{ $brobrobro->nama_ruangan}}</option>
                         @endforeach
                      </select>
                 </div>

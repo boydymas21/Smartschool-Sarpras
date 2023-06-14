@@ -24,7 +24,7 @@
                             <br>
                             <br>
                             <p class="card-text">
-                                {{ __('Di buat oleh Kelompok 8 Golongan C teknik informatika 2020') }}
+                                {{ __('web ini di buat oleh Kelompok 8 Golongan C teknik informatika 2020') }}
                             </p>
                         </div>
                     </div>
