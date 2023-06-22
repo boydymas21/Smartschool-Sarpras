@@ -89,11 +89,7 @@
                 </div>
                 <div class="form-group col-2">
                     <label>Surat Disposisi</label>
-                    <input class="form-control" type="file" name="disposisi">
-                </div>
-                <div class="form-group col-2">
-                    <label>Approvals</label>
-                    <input class="form-control" type="text" name="approval"  disabled>
+                    <input class="form-control" type="file" name="disposisi" disabled>
                 </div>
             </div>
           </div>

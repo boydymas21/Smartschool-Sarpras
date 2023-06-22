@@ -30,10 +30,9 @@
                         </tr>
                 </thead>
                 <tbody>
-                    <?php $i = $data->firstItem()?>
                     @foreach ($data as $item)
                     <tr>
-                        <td>{{$i}}</td>
+                        <td>{{$item->id}}</td>
                         <td>{{$item->seri}}</td>
                         <td>{{$item->nama}}</td>
                         <td>{{$item->satuan}}</td>
@@ -51,7 +50,7 @@
                             </form>
                         </td>
                     </tr> 
-                    <?php $i++ ?>
+
                     @endforeach
                 </tbody>
             </table>

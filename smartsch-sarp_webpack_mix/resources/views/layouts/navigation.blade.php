@@ -35,14 +35,14 @@
                             <p>List/input barang</p>
                         </a>
                     </li>
-
+{{-- 
                     <li class="nav-item">
                         <a href="{{ route('pengadaan.index') }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Pengadaan barang</p>
                         </a>
                     </li>
-
+--}}
                     <li class="nav-item">
                         <a href="{{route('barang.laporan')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
@@ -93,15 +93,15 @@
                                 </a>
                             </li>
 
-                            <li class="nav-item">
+                            {{-- <li class="nav-item">
                                 <a href="#" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Approval Surat</p>
                                 </a>
                             </li>
-        
+         --}}
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="{{route('peminjaman.laporan')}}" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Laporan Pinjaman</p>
                                 </a>

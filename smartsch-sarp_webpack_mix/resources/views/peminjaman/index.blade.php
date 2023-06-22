@@ -38,10 +38,9 @@
                     </tr>
             </thead>
             <tbody>
-                <?php $i = $data->firstItem()?>
                 @foreach ($data as $item)
                 <tr>
-                    <td>{{$i}}</td>
+                    <td>{{$item->id}}</td>
                     <td>{{$item->nama_peminjam}}</td>
                     <td>{{$item->status_peminjam}}</td>
                     <td>{{$item->nama_barang}}</td>
@@ -52,7 +51,7 @@
                     <td>{{$item->disposisi}}</td>
                     <td>{{$item->approval}}</td>
                 </tr> 
-                <?php $i++ ?>
+
                 @endforeach
             </tbody>
         </table>

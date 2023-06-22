@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\input_barang;
 use App\Models\peminjamanM;
 use App\Models\approvals;
@@ -16,7 +17,7 @@ class peminjaman extends Controller
      */
     public function index()
     {
-        $data = peminjamanm::orderBy('id', 'desc')->paginate(10);
+        $data = peminjamanm::orderBy('id', 'desc')->get();
         $barang = input_barang::all();
         $appv = approvals::all();
         return view('peminjaman.index', compact('barang'))->with('data', $data);
@@ -86,7 +87,8 @@ class peminjaman extends Controller
      */
     public function show($id)
     {
-        //
+        $data = peminjamanM::orderBy('id', 'desc')->get();
+        return view('peminjaman.laporan')->with('data', $data);
     }
 
     /**
@@ -97,7 +99,8 @@ class peminjaman extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = peminjamanM::where('nama_peminjam',$id)->first();
+        return view('peminjaman.edit')->with('data',$data);
     }
 
     /**
@@ -109,7 +112,21 @@ class peminjaman extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'approval' =>'required',
+        ],[
+            'approval.required' => 'approval wajib diisi',
+        ]);
+        $data = [
+            'approval' => $request->approval,
+        ];
+        peminjamanM::where('nama_peminjam', $id)->update($data);
+        return redirect()->to('suratmasuk');
+    }
+
+    public function laporann()
+    {   
+        
     }
 
     /**

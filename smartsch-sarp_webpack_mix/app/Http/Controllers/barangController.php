@@ -19,7 +19,7 @@ class barangController extends Controller
      */
     public function index()
     {
-        $data = input_barang::orderBy('id', 'desc')->paginate(10);
+        $data = input_barang::orderBy('id', 'desc')->get();
         $satuan = satuan::all();
         $kategori = kategori::all();
         $ruangan = ruangan::all();
@@ -28,7 +28,7 @@ class barangController extends Controller
 
     public function laporan()
     {   
-        $data = input_barang::orderBy('id', 'desc')->paginate(10);
+        $data = input_barang::orderBy('id', 'desc')->get();
         $satuan = satuan::all();
         $kategori = kategori::all();
         $ruangan = ruangan::all();

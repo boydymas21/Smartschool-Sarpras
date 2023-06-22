@@ -22,15 +22,14 @@
                                 <th>Tanggal Pegembalian</th>
                                 <th>Jumlah Pinjam</th>
                                 <th>Alasan Peminjaman</th>
-                                <th>Surat Disposisi</th>
                                 <th>Approval</th>
+                                <th>option</th>
                                 </tr>
                         </thead>
                         <tbody>
-                            <?php $i = $data->firstItem()?>
                             @foreach ($data as $item)
                             <tr>
-                                <td>{{$i}}</td>
+                                <td>{{$item->id}}</td>
                                 <td>{{$item->nama_peminjam}}</td>
                                 <td>{{$item->status_peminjam}}</td>
                                 <td>{{$item->nama_barang}}</td>
@@ -38,10 +37,9 @@
                                 <td>{{$item->maxtgl_pinjam}}</td>
                                 <td>{{$item->jumlah_pinjam}}</td>
                                 <td>{{$item->alasan}}</td>
-                                <td>{{$item->disposisi}}</td>
                                 <td>{{$item->approval}}</td>
+                                <td><a href="{{url('peminjaman/'.$item->nama_peminjam.'/edit')}}" class="btn btn-primary">edit</a></td>
                             </tr> 
-                            <?php $i++ ?>
                             @endforeach
                         </tbody>
                     </table>
